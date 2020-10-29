@@ -2,7 +2,7 @@ resources:
 - name: wf-repo
   type: git
   source:
-    branch: master
+    branch: main
     uri: https://github.com/seanbot2000/concourse-wavefront-template-pipeline.git
 
 jobs:
