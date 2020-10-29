@@ -1,0 +1,1016 @@
+{
+    "modifyAclAccess": true,
+    "hidden": false,
+    "parameters": {},
+    "name": "PAS App to Infrastructure",
+    "id": "PAS-App-to-Infrastructure",
+    "description": "Full Correlation on everything",
+    "favorite": true,
+    "numCharts": 16,
+    "systemOwned": false,
+    "numFavorites": 1,
+    "customer": "demo",
+    "url": "PAS-App-to-Infrastructure",
+    "eventFilterType": "BYCHART",
+    "sections": [
+      {
+        "name": "Application",
+        "rows": [
+          {
+            "charts": [
+              {
+                "base": 0,
+                "units": "Units",
+                "name": "Application",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "markdown-widget",
+                  "fixedLegendEnabled": false,
+                  "plainMarkdownContent": "# ${appname} #",
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": false,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": false,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "New Query",
+                    "query": "",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "scatterPlotSource": "Y",
+                    "querybuilderSerialization": "{\"_v\":1,\"filters\":[[],\"and\"],\"functions\":[],\"metric\":\"ts(undefined)\"}",
+                    "querybuilderEnabled": true,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 0,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "%",
+                "name": "CPU",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": false,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": true,
+                "sources": [
+                  {
+                    "name": "cpu",
+                    "query": "avg(ts(vsphere.vm.cpu.demand.average))",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 3,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "B",
+                "name": "Memory",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": true,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": true,
+                "sources": [
+                  {
+                    "name": "mem",
+                    "query": "avg(ts(vsphere.vm.mem.active.average))",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 6,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "B",
+                "name": "Threads",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": true,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": true,
+                "sources": [
+                  {
+                    "name": "threads",
+                    "query": "avg(ts(vsphere.vm.cpu.ready.summation)/10)",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 9,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              }
+            ],
+            "heightFactor": 80
+          }
+        ],
+        "sectionFilter": null
+      },
+      {
+        "name": "PCF",
+        "rows": [
+          {
+            "charts": [
+              {
+                "base": 0,
+                "units": "Units",
+                "name": "PCF Container",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "markdown-widget",
+                  "fixedLegendEnabled": false,
+                  "plainMarkdownContent": "Diego Cell\n# ${ip} #",
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": false,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": false,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "New Query",
+                    "query": "",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "scatterPlotSource": "Y",
+                    "querybuilderSerialization": "{\"_v\":1,\"filters\":[[],\"and\"],\"functions\":[],\"metric\":\"ts(undefined)\"}",
+                    "querybuilderEnabled": true,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 0,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "%",
+                "name": "CPU",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": false,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": false,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": true,
+                "sources": [
+                  {
+                    "name": "cpu",
+                    "query": "avg(ts(pcf.container.rep.cpu_percentage, foundation=\"${0_foundation}\" and source=\"${ip}\"))",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 3,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "B",
+                "name": "Memory",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": true,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": true,
+                "sources": [
+                  {
+                    "name": "mem",
+                    "query": "ts(pcf.rep.memoryStats.numBytesAllocatedHeap.Bytes, foundation=\"${0_foundation}\" and source=\"${ip}\")",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 6,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "MiB",
+                "name": "Disk Bytes",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": true,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": true,
+                "sources": [
+                  {
+                    "name": "Allocated",
+                    "query": "ts(pcf.rep.CapacityAllocatedDisk.MiB, foundation=\"${0_foundation}\" and source=\"${ip}\")",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  },
+                  {
+                    "name": "Remaining",
+                    "query": "ts(pcf.rep.CapacityRemainingDisk.MiB, foundation=\"${0_foundation}\" and source=\"${ip}\")",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 9,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              }
+            ],
+            "heightFactor": 80
+          }
+        ],
+        "sectionFilter": null
+      },
+      {
+        "name": "VM",
+        "rows": [
+          {
+            "charts": [
+              {
+                "base": 0,
+                "units": "Units",
+                "name": "Virtual Machine",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "markdown-widget",
+                  "fixedLegendEnabled": false,
+                  "plainMarkdownContent": "## ${vmname} ##",
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": false,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": false,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "New Query",
+                    "query": "",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "scatterPlotSource": "Y",
+                    "querybuilderSerialization": "{\"_v\":1,\"filters\":[[],\"and\"],\"functions\":[],\"metric\":\"ts(undefined)\"}",
+                    "querybuilderEnabled": true,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 0,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "ms",
+                "name": "CPU Summation",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": false,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": false,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "RIGHT",
+                  "fixedLegendDisplayStats": [
+                    "CURRENT"
+                  ],
+                  "fixedLegendFilterSort": "TOP",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "CURRENT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "CPU",
+                    "query": "ts(vsphere.vm.cpu.used.summation, vmname=jump-host and not cpu=instance-total)",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 3,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "KiB",
+                "name": "Memory Usage",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": false,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": true,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "RIGHT",
+                  "fixedLegendDisplayStats": [
+                    "CURRENT"
+                  ],
+                  "fixedLegendFilterSort": "TOP",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "CURRENT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "granted",
+                    "query": "ts(vsphere.vm.mem.granted.average, vmname=jump-host)",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  },
+                  {
+                    "name": "active",
+                    "query": "ts(vsphere.vm.mem.active.average, vmname=jump-host)",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 6,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "KiB",
+                "name": "Disk I/O",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": false,
+                "chartSettings": {
+                  "type": "stacked-area",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "stackType": "silhouette",
+                  "windowing": "full",
+                  "showHosts": true,
+                  "showLabels": true,
+                  "showRawValues": false,
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "groupBySource": false,
+                  "sortValuesDescending": true,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": true,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "RIGHT",
+                  "fixedLegendDisplayStats": [
+                    "CURRENT"
+                  ],
+                  "fixedLegendFilterSort": "TOP",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "CURRENT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "reads",
+                    "query": "ts(vsphere.vm.virtualDisk.read.average, vmname=jump-host and not disk=instance-total)",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  },
+                  {
+                    "name": "writes",
+                    "query": "ts(vsphere.vm.virtualDisk.write.average, vmname=jump-host and not disk=instance-total)",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 9,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              }
+            ],
+            "heightFactor": 80
+          }
+        ],
+        "sectionFilter": null
+      },
+      {
+        "name": "ESX Host",
+        "rows": [
+          {
+            "charts": [
+              {
+                "base": 0,
+                "units": "Units",
+                "name": "ESX Host",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": true,
+                "chartSettings": {
+                  "type": "markdown-widget",
+                  "fixedLegendEnabled": false,
+                  "plainMarkdownContent": "# ${esxhostname} #\n",
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": false,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": false,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "TOP",
+                  "fixedLegendDisplayStats": [],
+                  "fixedLegendFilterSort": "BOTTOM",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "COUNT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "New Query",
+                    "query": "",
+                    "secondaryAxis": false,
+                    "disabled": false,
+                    "scatterPlotSource": "Y",
+                    "querybuilderSerialization": "{\"_v\":1,\"filters\":[[],\"and\"],\"functions\":[],\"metric\":\"ts(undefined)\"}",
+                    "querybuilderEnabled": true,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 0,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 1,
+                "units": "Mhz",
+                "name": "CPU",
+                "description": "",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": false,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": false,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": false,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "RIGHT",
+                  "fixedLegendDisplayStats": [
+                    "CURRENT"
+                  ],
+                  "fixedLegendFilterSort": "TOP",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "CURRENT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "CPU mhz",
+                    "query": "ts(vsphere.host.cpu.usagemhz.average, esxhostname=\"${esxhostname}\")",
+                    "secondaryAxis": false,
+                    "scatterPlotSource": "Y",
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 3,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 1,
+                "units": "KiB",
+                "name": "Memory Active",
+                "description": "",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": false,
+                "chartSettings": {
+                  "type": "line",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": true,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "RIGHT",
+                  "fixedLegendDisplayStats": [
+                    "CURRENT"
+                  ],
+                  "fixedLegendFilterSort": "TOP",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "CURRENT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "Memory",
+                    "query": "ts(vsphere.host.mem.active.average, esxhostname=\"${esxhostname}\")",
+                    "secondaryAxis": false,
+                    "scatterPlotSource": "Y",
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 6,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              },
+              {
+                "base": 0,
+                "units": "B",
+                "name": "Disk I/O",
+                "summarization": "MEAN",
+                "interpolatePoints": false,
+                "noDefaultEvents": false,
+                "chartSettings": {
+                  "type": "stacked-area",
+                  "fixedLegendEnabled": false,
+                  "fixedLegendUseRawStats": false,
+                  "customTags": [],
+                  "lineType": "linear",
+                  "stackType": "silhouette",
+                  "windowing": "full",
+                  "autoColumnTags": false,
+                  "tagMode": "all",
+                  "numTags": 4,
+                  "y1Units": "",
+                  "y0ScaleSIBy1024": true,
+                  "y1ScaleSIBy1024": false,
+                  "y0UnitAutoscaling": true,
+                  "y1UnitAutoscaling": false,
+                  "fixedLegendPosition": "RIGHT",
+                  "fixedLegendDisplayStats": [
+                    "CURRENT"
+                  ],
+                  "fixedLegendFilterSort": "TOP",
+                  "fixedLegendFilterLimit": 5,
+                  "fixedLegendFilterField": "CURRENT"
+                },
+                "includeObsoleteMetrics": false,
+                "sources": [
+                  {
+                    "name": "Disk read average",
+                    "query": "ts(vsphere.host.disk.read.average, esxhostname=\"${esxhostname}\" and not disk=instance-total)",
+                    "scatterPlotSource": "Y",
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  },
+                  {
+                    "name": "Disk write average",
+                    "query": "ts(vsphere.host.disk.write.average, esxhostname=\"${esxhostname}\" and not disk=instance-total)",
+                    "scatterPlotSource": "Y",
+                    "querybuilderEnabled": false,
+                    "sourceDescription": ""
+                  }
+                ],
+                "chartAttributes": {
+                  "dashboardLayout": {
+                    "x": 9,
+                    "y": 0,
+                    "h": 4,
+                    "w": 3
+                  }
+                }
+              }
+            ],
+            "heightFactor": 80
+          }
+        ],
+        "sectionFilter": null
+      }
+    ],
+    "parameterDetails": {
+      "esxhostname": {
+        "defaultValue": "Label_14",
+        "order": 7,
+        "label": "ESX Host Name",
+        "dynamicFieldType": "TAG_KEY",
+        "parameterType": "DYNAMIC",
+        "valuesToReadableStrings": {
+          "Label_14": "sc2-pcfone-esx-23.prs.pez.pivotal.io"
+        },
+        "hideFromView": false,
+        "tagKey": "esxhostname",
+        "queryValue": "ts(vsphere.vm.sys.uptime.latest)"
+      },
+      "appname": {
+        "defaultValue": "Label_102",
+        "order": 2,
+        "label": "Application Name",
+        "dynamicFieldType": "TAG_KEY",
+        "parameterType": "DYNAMIC",
+        "valuesToReadableStrings": {
+          "Label_102": "app-usage-scheduler"
+        },
+        "hideFromView": false,
+        "tagKey": "applicationName",
+        "queryValue": "ts(pcf.container.rep.cpu_percentage, foundation=\"${0_foundation}\")"
+      },
+      "vmid": {
+        "defaultValue": "Label",
+        "order": 5,
+        "label": "VM ID",
+        "dynamicFieldType": "TAG_KEY",
+        "parameterType": "DYNAMIC",
+        "valuesToReadableStrings": {
+          "Label": "d227ac7b-a2f8-4122-a7c6-b5ae595b0508"
+        },
+        "hideFromView": false,
+        "tagKey": "instance_id",
+        "queryValue": "ts(pcf.rep.ContainerCount.Metric, source=\"${ip}\")"
+      },
+      "appid": {
+        "defaultValue": "Label",
+        "order": 3,
+        "label": "Application ID",
+        "dynamicFieldType": "TAG_KEY",
+        "parameterType": "DYNAMIC",
+        "valuesToReadableStrings": {
+          "Label": "80a07bb5-3dc0-42ce-bc8b-b30b3e5aaa1c"
+        },
+        "hideFromView": false,
+        "tagKey": "applicationId",
+        "queryValue": "ts(pcf.container.rep.cpu_percentage, foundation=\"${0_foundation}\" and applicationName=\"${appname}\")"
+      },
+      "0_foundation": {
+        "defaultValue": "Label",
+        "order": 1,
+        "label": "Foundation",
+        "dynamicFieldType": "TAG_KEY",
+        "parameterType": "DYNAMIC",
+        "valuesToReadableStrings": {
+          "Label": "PCF-One"
+        },
+        "hideFromView": false,
+        "tagKey": "foundation",
+        "queryValue": "ts(pcf.container.rep.memory_bytes)"
+      },
+      "view_mode": {
+        "defaultValue": "all",
+        "order": 8,
+        "label": "View",
+        "parameterType": "LIST",
+        "valuesToReadableStrings": {
+          "all": "max(",
+          "breakdown": "("
+        },
+        "hideFromView": false
+      },
+      "ip": {
+        "defaultValue": "Label",
+        "order": 4,
+        "label": "PCF Diego Cell IP",
+        "dynamicFieldType": "SOURCE",
+        "parameterType": "DYNAMIC",
+        "valuesToReadableStrings": {
+          "Label": "192.168.16.14"
+        },
+        "hideFromView": false,
+        "tagKey": "",
+        "queryValue": "ts(pcf.container.rep.cpu_percentage, foundation=\"${0_foundation}\" and applicationName=\"${appname}\")"
+      },
+      "vmname": {
+        "defaultValue": "Label",
+        "order": 6,
+        "label": "VM Name",
+        "dynamicFieldType": "SOURCE",
+        "parameterType": "DYNAMIC",
+        "valuesToReadableStrings": {
+          "Label": "vm-017ffd9d-820d-4ef7-8c6c-2a10ff777b57"
+        },
+        "hideFromView": false,
+        "queryValue": "ts(vsphere.vm.sys.uptime.latest, id=\"${vmid}\")"
+      }
+    },
+    "displayDescription": false,
+    "displaySectionTableOfContents": true,
+    "displayQueryParameters": true,
+    "chartTitleScalar": 0,
+    "tags": {
+      "customerTags": [
+        "demo.pcf"
+      ]
+    },
+    "eventQuery": "",
+    "defaultTimeWindow": "2h",
+    "viewsLastDay": 0,
+    "viewsLastWeek": 0,
+    "viewsLastMonth": 0,
+    "acl": {
+      "canView": [],
+      "canModify": [
+        "8ca362c4-58b2-41e2-8d16-f3456ee33a8a",
+        "prydin"
+      ]
+    },
+    "dashboardAttributes": null,
+    "orphan": false,
+    "creatorId": "prydin",
+    "updaterId": "prydin",
+    "createdEpochMillis": 1584636547547,
+    "updatedEpochMillis": 1584636991729,
+    "deleted": false
+  }

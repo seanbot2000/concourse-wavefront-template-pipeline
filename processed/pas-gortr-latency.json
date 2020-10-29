@@ -1,0 +1,108 @@
+{
+  "targetEndpoints": [
+    "target:ZPq55mXL0EBxXmyt"
+  ],
+  "modifyAclAccess": true,
+  "lastEventTime": 1603847140000,
+  "hidden": false,
+  "severity": "SMOKE",
+  "minutes": 5,
+  "name": "PAS Gorouter Handling Latency",
+  "id": "1602089471916",
+  "event": {
+    "table": "garmin",
+    "name": "PAS Gorouter Handling Latency",
+    "annotations": {
+      "severity": "severe",
+      "details": "<a class='ds-alert-link' href='https://longboard.wavefront.com/u/Kh7KT7jx1h?t&#61;garmin'>View Alert</a><br><strong>First Affected: </strong>10.5.119.246 (pcf.gorouter.latency.ms) [product=Isolation Segment][ip=10.5.119.246][origin=gorouter][index=15f8d06d-8fa0-4992-abeb-dd47cc677cea][foundation=OLA Nonprod][job=isolated_router_iso_seg_1][__v1_type=ValueMetric][placement_tag=isolation-segment-1][system_domain=ola-nonprod.cf.garmin.com][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 841.03125, 10.5.119.245 (pcf.gorouter.latency.ms) [product=Isolation Segment][origin=gorouter][ip=10.5.119.245][index=1dad0c67-f160-4627-bb60-5bb3bb4cfb1f][foundation=OLA Nonprod][job=isolated_router_iso_seg_1][__v1_type=ValueMetric][placement_tag=isolation-segment-1][system_domain=ola-nonprod.cf.garmin.com][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 848.0625",
+      "type": "alert",
+      "created": "1602089471916",
+      "target": "target:ZPq55mXL0EBxXmyt"
+    },
+    "id": "1603847140000:PAS Gorouter Handling Latency:0",
+    "startTime": 1603847140000,
+    "metricsUsed": [
+      "pcf.gorouter.latency.ms"
+    ],
+    "hosts": [
+      "10.5.119.246",
+      "10.5.119.245"
+    ],
+    "alertTags": null,
+    "isEphemeral": false,
+    "creatorId": "System Event",
+    "updaterId": "System Event",
+    "runningState": "ONGOING",
+    "canDelete": false,
+    "canClose": false,
+    "creatorType": [
+      "SYSTEM",
+      "ALERT"
+    ]
+  },
+  "tags": {
+    "customerTags": [
+      "pcf",
+      "prescribed.se"
+    ]
+  },
+  "status": [
+    "FIRING"
+  ],
+  "created": 1602089471916,
+  "updated": 1602089471916,
+  "hostsUsed": [],
+  "orphan": false,
+  "inTrash": false,
+  "acl": {
+    "canView": [],
+    "canModify": [
+      "90815293-1545-4aea-bde7-aaccfa7faa85"
+    ]
+  },
+  "lastNotificationMillis": 1603847141039,
+  "alertsLastDay": 2,
+  "alertsLastWeek": 26,
+  "alertsLastMonth": 120,
+  "numPointsInFailureFrame": 95,
+  "lastQueryTime": 229,
+  "alertType": "THRESHOLD",
+  "metricsUsed": [
+    "pcf.gorouter.latency.ms"
+  ],
+  "systemOwned": false,
+  "condition": "",
+  "conditions": {
+    "smoke": "mmedian(30m, ts(pcf.gorouter.latency.ms, job !=\"*isolation*\")) > 100"
+  },
+  "conditionQBEnabled": false,
+  "displayExpression": "mmedian(30m, ts(pcf.gorouter.latency.ms, job !=\"*isolation*\"))",
+  "resolveAfterMinutes": 5,
+  "failingHostLabelPairs": [],
+  "additionalInformation": "This measures the amount of time a Gorouter takes to handle requests to backend endpoints, including both apps, CC and UAA. This is a 30-minute moving average round trip response time, including route handling. It indicates how Gorouter jobs in PAS impact overall responsiveness. \nLatencies above 100 ms can indicate problems with the network, misbehaving backends, or a need to scale the Gorouter due to traffic congestion.\nACTIONS: \n(!) First inspect logs for network issues and indications of misbehaving backends.\n(!) If it appears that the Gorouter needs to scale due to ongoing traffic congestion, do not scale on the latency metric alone. You should also look at the CPU utilization of the Gorouter VMs and keep it within a maximum 60-70% range.\n(!) Resolve high utilization by scaling the Gorouter.",
+  "inMaintenanceHostLabelPairs": [],
+  "activeMaintenanceWindows": [],
+  "updateUserId": "dev+garmin@wavefront.com",
+  "prefiringHostLabelPairs": [],
+  "notificants": [],
+  "createUserId": "dev+garmin@wavefront.com",
+  "lastProcessedMillis": 1603849524263,
+  "pointsScannedAtLastQuery": 39171,
+  "creatorId": "dev+garmin@wavefront.com",
+  "updaterId": "dev+garmin@wavefront.com",
+  "createdEpochMillis": 1602089471916,
+  "updatedEpochMillis": 1602089471916,
+  "deleted": false,
+  "sortAttr": 2020,
+  "severityList": [
+    "SMOKE"
+  ],
+  "failingHostLabelPairLinks": [],
+  "targetInfo": [
+    {
+      "method": "WEBHOOK",
+      "id": "ZPq55mXL0EBxXmyt",
+      "name": "Wavefront-> Slack Alerts"
+    }
+  ]
+}

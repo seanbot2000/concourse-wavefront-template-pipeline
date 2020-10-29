@@ -1,0 +1,47 @@
+{
+    "targetEndpoints": [
+    "target:ZPq55mXL0EBxXmyt"
+  ],
+  "severity": "SEVERE",
+  "minutes": 5,
+  "target": "target:ZPq55mXL0EBxXmyt",
+  "event": {
+    "annotations": {
+      "severity": "severe",
+      "target": "target:ZPq55mXL0EBxXmyt"
+    },
+    "alertTags": [
+        "pcf",
+        "prescribed.se"
+      ]
+  },
+  "tags": {
+    "customerTags": [
+      "pcf",
+      "prescribed.se"
+    ]
+  },
+  "acl": {
+    "canView": [],
+    "canModify": [
+      "90815293-1545-4aea-bde7-aaccfa7faa85"
+    ]
+  },
+  "foundation" : "OLANONPROD",
+  "resolveAfterMinutes": 5,
+  "targetInfo": [
+    {
+      "method": "WEBHOOK",
+      "id": "ZPq55mXL0EBxXmyt",
+      "name": "Wavefront-> Slack Alerts"
+    }
+  ],
+  "conditions": {
+    "severe": "sum(ts(pcf.bbs.LockHeld.Metric),foundation = 'OLANONPROD') < 1"
+  },
+  "displayExpression": "sum(ts(pcf.bbs.LockHeld.Metric),foundation = 'OLANONPROD')"
+}
+
+ 
+
+

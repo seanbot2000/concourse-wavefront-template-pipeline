@@ -1,0 +1,94 @@
+{
+  "targetEndpoints": $config.targetEndpoints,
+  "modifyAclAccess": true,
+  "lastEventTime": 1602089618000,
+  "hidden": false,
+  "severity": "WARN",
+  "minutes": 5,
+  "name": "PAS Diego Cell Memory Capacity",
+  "id": "1602089473519",
+  "event": {
+    "table": "garmin",
+    "name": "PAS Diego Cell Memory Capacity",
+    "annotations": {
+      "severity": $config.event.annotations.severity,
+      "details": "<a class='ds-alert-link' href='https://longboard.wavefront.com/u/GhnxrwZfrD?t&#61;garmin'>View Alert</a><br><strong>First Affected: </strong>10.5.116.13 [product=Isolation Segment][zone=CloudFoundry-3][ip=10.5.116.13][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 18.85632683471998, 10.5.116.16 [product=Isolation Segment][zone=CloudFoundry-3][ip=10.5.116.16][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 16.056128150999626, 10.5.95.18 [product=VMware Tanzu Application Service][zone=CloudFoundry-1][ip=10.5.95.18][foundation=OLA Sandbox][job=diego_cell][deployment=cf-53371b7156890ffd705c] : 15.41147132169576, 10.5.116.22 [product=Isolation Segment][zone=CloudFoundry-3][ip=10.5.116.22][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 17.59592698373277, 10.5.116.18 [product=Isolation Segment][zone=CloudFoundry-1][ip=10.5.116.18][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 23.357754873960015, 10.5.116.11 [product=Isolation Segment][zone=CloudFoundry-1][ip=10.5.116.11][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 17.645597913820936, 10.5.116.17 [product=Isolation Segment][zone=CloudFoundry-1][ip=10.5.116.17][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 21.96696883149137, 10.5.100.49 [product=VMware Tanzu Application Service][zone=CloudFoundry-1][ip=10.5.100.49][foundation=OLA Nonprod][job=diego_cell][deployment=cf-4ecda28cbf721526e6df] : 26.387681609338138, 10.5.116.15 [product=Isolation Segment][zone=CloudFoundry-2][ip=10.5.116.15][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 23.556438594312677, 10.5.100.19 [product=VMware Tanzu Application Service][zone=CloudFoundry-3][ip=10.5.100.19][foundation=OLA Nonprod][job=diego_cell][deployment=cf-4ecda28cbf721526e6df] : 30.839438718490005, 10.5.116.12 [product=Isolation Segment][zone=CloudFoundry-2][ip=10.5.116.12][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 17.198559543027443, 10.5.100.110 [product=VMware Tanzu Application Service][zone=CloudFoundry-1][ip=10.5.100.110][foundation=OLA Nonprod][job=diego_cell][deployment=cf-4ecda28cbf721526e6df] : 29.665962995157084, 10.5.100.78 [product=VMware Tanzu Application Service][zone=CloudFoundry-3][ip=10.5.100.78][foundation=OLA Nonprod][job=diego_cell][deployment=cf-4ecda28cbf721526e6df] : 30.12852353160313, 10.5.100.97 [product=VMware Tanzu Application Service][zone=CloudFoundry-1][ip=10.5.100.97][foundation=OLA Nonprod][job=diego_cell][deployment=cf-4ecda28cbf721526e6df] : 30.178194461691294, 10.5.95.20 [product=VMware Tanzu Application Service][zone=CloudFoundry-1][ip=10.5.95.20][foundation=OLA Sandbox][job=diego_cell][deployment=cf-53371b7156890ffd705c] : 21.795511221945137, 10.5.100.99 [product=VMware Tanzu Application Service][zone=CloudFoundry-2][ip=10.5.100.99][foundation=OLA Nonprod][job=diego_cell][deployment=cf-4ecda28cbf721526e6df] : 30.858065317273066, 10.5.116.21 [product=Isolation Segment][zone=CloudFoundry-3][ip=10.5.116.21][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 16.85086303241028, 10.5.100.55 [product=VMware Tanzu Application Service][zone=CloudFoundry-2][ip=10.5.100.55][foundation=OLA Nonprod][job=diego_cell][deployment=cf-4ecda28cbf721526e6df] : 34.052527008568234, 10.5.116.20 [product=Isolation Segment][zone=CloudFoundry-2][ip=10.5.116.20][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 25.14590835713399, 10.5.95.22 [product=VMware Tanzu Application Service][zone=CloudFoundry-2][ip=10.5.95.22][foundation=OLA Sandbox][job=diego_cell][deployment=cf-53371b7156890ffd705c] : 14.613466334164588, 10.5.100.41 [product=VMware Tanzu Application Service][zone=CloudFoundry-2][ip=10.5.100.41][foundation=OLA Nonprod][job=diego_cell][deployment=cf-4ecda28cbf721526e6df] : 33.55581770768657, 10.5.95.21 [product=VMware Tanzu Application Service][zone=CloudFoundry-2][ip=10.5.95.21][foundation=OLA Sandbox][job=diego_cell][deployment=cf-53371b7156890ffd705c] : 33.96508728179551, 10.5.116.19 [product=Isolation Segment][zone=CloudFoundry-2][ip=10.5.116.19][foundation=OLA Nonprod][job=isolated_diego_cell_iso_seg_1][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 16.552837451881285",
+      "type": "alert",
+      "created": "1602089473519",
+      "target": $config.event.annotations.target
+    },
+    "id": "1602089618000:PAS Diego Cell Memory Capacity:0",
+    "startTime": 1602089618000,
+    "metricsUsed": [
+      "pcf.rep.CapacityTotalMemory.MiB",
+      "pcf.rep.CapacityRemainingMemory.MiB"
+    ],
+    "hosts": [],
+    "alertTags": $config.alertTags,
+    "isEphemeral": false,
+    "creatorId": "System Event",
+    "updaterId": "System Event",
+    "runningState": "ONGOING",
+    "canDelete": false,
+    "canClose": false,
+    "creatorType": [
+      "SYSTEM",
+      "ALERT"
+    ]
+  },
+  "tags": {
+    "customerTags": $config.tags.customerTags
+  },
+  "status": [
+    "FIRING"
+  ],
+  "created": 1602089473519,
+  "updated": 1602089473519,
+  "hostsUsed": [],
+  "inTrash": false,
+  "acl": {
+    "canView": $config.acl.canView,
+    "canModify": $config.acl.canModify
+  },
+  "orphan": false,
+  "numPointsInFailureFrame": 303,
+  "lastQueryTime": 142,
+  "alertType": "THRESHOLD",
+  "metricsUsed": [
+    "pcf.rep.CapacityTotalMemory.MiB",
+    "pcf.rep.CapacityRemainingMemory.MiB"
+  ],
+  "systemOwned": false,
+  "condition": "",
+  "conditions": {
+    "warn": "avg(ts(pcf.rep.CapacityRemainingMemory.MiB)/ts(pcf.rep.CapacityTotalMemory.MiB)*100, sources, job, foundation, deployment,ip,product,zone) < 35"
+  },
+  "conditionQBEnabled": false,
+  "displayExpression": "avg(ts(pcf.rep.CapacityRemainingMemory.MiB)/ts(pcf.rep.CapacityTotalMemory.MiB)*100, sources, job, foundation, deployment,ip,product,zone)",
+  "resolveAfterMinutes": $config.resolveAfterMinutes,
+  "failingHostLabelPairs": [],
+  "additionalInformation": "Percentage of remaining memory capacity for a given Diego Cell. Monitor this derived metric across all Diego Cells in a deployment.\nThe metric rep.CapacityRemainingMemory indicates the remaining amount in MiB of memory available for this Diego Cell to allocate to containers.\nThe metric rep.CapacityTotalMemory indicates the total amount in MiB of memory available for this Diego Cell to allocate to containers.\nRecommended threshold: < avg(35%)",
+  "inMaintenanceHostLabelPairs": [],
+  "activeMaintenanceWindows": [],
+  "updateUserId": "dev+garmin@wavefront.com",
+  "prefiringHostLabelPairs": [],
+  "notificants": [],
+  "createUserId": "dev+garmin@wavefront.com",
+  "lastProcessedMillis": 1603849593389,
+  "pointsScannedAtLastQuery": 3188,
+  "lastNotificationMillis": 1603849593613,
+  "alertsLastDay": 0,
+  "alertsLastWeek": 0,
+  "alertsLastMonth": 0,
+  "creatorId": "dev+garmin@wavefront.com",
+  "updaterId": "dev+garmin@wavefront.com",
+  "createdEpochMillis": 1602089473519,
+  "updatedEpochMillis": 1602089473519,
+  "deleted": false,
+  "failingHostLabelPairLinks": [],
+  "targetInfo": $config.targetInfo,
+  "sortAttr": 2030,
+  "severityList": [
+    "WARN"
+  ]
+}

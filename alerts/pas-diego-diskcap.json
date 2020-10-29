@@ -1,0 +1,96 @@
+{
+  "targetEndpoints": $config.targetEndpoints,
+  "modifyAclAccess": true,
+  "lastEventTime": 1603144644000,
+  "hidden": false,
+  "severity": "SMOKE",
+  "minutes": 5,
+  "name": "PAS Diego Cell Disk Capacity",
+  "id": "1602089149772",
+  "event": {
+    "table": "garmin",
+    "name": "PAS Diego Cell Disk Capacity",
+    "annotations": {
+      "severity": $config.event.annotations.severity,
+      "details": "<a class='ds-alert-link' href='https://longboard.wavefront.com/u/Js53tBK7q5?t&#61;garmin'>View Alert</a><br><strong>First Affected: </strong>10.5.100.104 [zone=CloudFoundry-3][ip=10.5.100.104][job=diego_cell][system_domain=ola-nonprod.cf.garmin.com][deployment=cf-4ecda28cbf721526e6df] : 19.905603032145027, 10.5.100.86 [zone=CloudFoundry-2][ip=10.5.100.86][job=diego_cell][system_domain=ola-nonprod.cf.garmin.com][deployment=cf-4ecda28cbf721526e6df] : 15.786462616655344, 10.5.100.71 [zone=CloudFoundry-2][ip=10.5.100.71][job=diego_cell][system_domain=ola-nonprod.cf.garmin.com][deployment=cf-4ecda28cbf721526e6df] : 18.074873958594058, 10.5.100.79 [zone=CloudFoundry-2][ip=10.5.100.79][job=diego_cell][system_domain=ola-nonprod.cf.garmin.com][deployment=cf-4ecda28cbf721526e6df] : 19.447920763757285, 10.5.116.15 [zone=CloudFoundry-2][ip=10.5.116.15][job=isolated_diego_cell_iso_seg_1][system_domain=ola-nonprod.cf.garmin.com][deployment=p-isolation-segment-iso-seg-1-5888a2360b72e53c62fd] : 34.09375335216505, 10.5.100.9 [zone=CloudFoundry-2][ip=10.5.100.9][job=diego_cell][system_domain=ola-nonprod.cf.garmin.com][deployment=cf-4ecda28cbf721526e6df] : 17.559981406657847, 10.5.100.10 [zone=CloudFoundry-2][ip=10.5.100.10][job=diego_cell][system_domain=ola-nonprod.cf.garmin.com][deployment=cf-4ecda28cbf721526e6df] : 14.413415811492117, 10.5.100.74 [zone=CloudFoundry-3][ip=10.5.100.74][job=diego_cell][system_domain=ola-nonprod.cf.garmin.com][deployment=cf-4ecda28cbf721526e6df] : 13.040369006328886, 10.5.100.95 [zone=CloudFoundry-3][ip=10.5.100.95][job=diego_cell][system_domain=ola-nonprod.cf.garmin.com][deployment=cf-4ecda28cbf721526e6df] : 15.786462616655344",
+      "type": "alert",
+      "created": "1602089149772",
+      "target": $config.event.annotations.target
+    },
+    "id": "1603144644000:PAS Diego Cell Disk Capacity:0",
+    "startTime": 1603144644000,
+    "metricsUsed": [
+      "pcf.rep.CapacityRemainingDisk.MiB",
+      "pcf.rep.CapacityTotalDisk.MiB"
+    ],
+    "hosts": [],
+    "alertTags": $config.alertTags,
+    "isEphemeral": false,
+    "creatorId": "System Event",
+    "updaterId": "System Event",
+    "runningState": "ONGOING",
+    "canDelete": false,
+    "canClose": false,
+    "creatorType": [
+      "SYSTEM",
+      "ALERT"
+    ]
+  },
+  "tags": {
+    "customerTags": $config.tags.customerTags
+  },
+  "status": [
+    "FIRING"
+  ],
+  "created": 1602089149772,
+  "updated": 1602089149772,
+  "hostsUsed": [
+    
+  ],
+  "inTrash": false,
+  "acl": {
+    "canView": $config.acl.canView,
+    "canModify": $config.acl.canModify
+  },
+  "orphan": false,
+  "numPointsInFailureFrame": 303,
+  "lastQueryTime": 60,
+  "alertType": "THRESHOLD",
+  "metricsUsed": [
+    "pcf.rep.CapacityRemainingDisk.MiB",
+    "pcf.rep.CapacityTotalDisk.MiB"
+  ],
+  "systemOwned": false,
+  "condition": "",
+  "conditions": {
+    "smoke": "avg(ts(pcf.rep.CapacityRemainingDisk.MiB)/ts(pcf.rep.CapacityTotalDisk.MiB)*100,sources, zone, system_domain,job,ip,deployment) < 35"
+  },
+  "conditionQBEnabled": false,
+  "displayExpression": "avg(ts(pcf.rep.CapacityRemainingDisk.MiB)/ts(pcf.rep.CapacityTotalDisk.MiB)*100,sources, zone, system_domain,job,ip,deployment)",
+  "resolveAfterMinutes": $config.resolveAfterMinutes,
+  "failingHostLabelPairs": [  ],
+  "additionalInformation": "Percentage of remaining disk capacity for a given Diego Cell. Monitor this derived metric across all Diego Cells in a deployment.\nThe metric rep.CapacityRemainingDisk indicates the remaining amount in MiB of disk available for this Diego Cell to allocate to containers.\nThe metric rep.CapacityTotalDisk indicates the total amount in MiB of disk available for this Diego Cell to allocate to containers.\nRecommended threshold: < avg(35%)",
+  "inMaintenanceHostLabelPairs": [],
+  "activeMaintenanceWindows": [],
+  "updateUserId": "dev+garmin@wavefront.com",
+  "prefiringHostLabelPairs": [],
+  "notificants": [],
+  "createUserId": "dev+garmin@wavefront.com",
+  "lastProcessedMillis": 1603849507944,
+  "pointsScannedAtLastQuery": 2097,
+  "lastNotificationMillis": 1603849508184,
+  "alertsLastDay": 0,
+  "alertsLastWeek": 0,
+  "alertsLastMonth": 1,
+  "creatorId": "dev+garmin@wavefront.com",
+  "updaterId": "dev+garmin@wavefront.com",
+  "createdEpochMillis": 1602089149772,
+  "updatedEpochMillis": 1602089149772,
+  "deleted": false,
+  "failingHostLabelPairLinks": [],
+  "targetInfo": $config.targetInfo,
+  "sortAttr": 2020,
+  "severityList": [
+    "SMOKE"
+  ]
+}
