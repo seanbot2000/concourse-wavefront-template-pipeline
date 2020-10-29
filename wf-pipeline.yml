@@ -29,4 +29,4 @@ jobs:
           chmod +x ./scripts/jq.sh 
           chmod +x ./scripts/wavefront.sh 
           ./scripts/jq.sh 
-          ./scripts/wavefront.sh ((wavefront-api-token))
+          ./scripts/wavefront.sh ((bucc.wavefront-api-token))
