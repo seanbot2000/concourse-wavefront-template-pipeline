@@ -13,19 +13,25 @@ jobs:
   - task: wavefront-task
     config:
       platform: linux
+      inputs:
+      - name: wf-repo
       image_resource:
         type: docker-image
         source:
           repository: alpine
           tag: edge
       run:
-        path: /bin/bash
+        path: /bin/sh
         args:
         - -c
         - |
           apk update 
-          apk install jq 
-          apk install curl
+          apk add jq 
+          apk add curl
+          apk add bash
+          pwd
+          ls -la
+          cd wf-repo
           chmod +x ./scripts/jq.sh 
           chmod +x ./scripts/wavefront.sh 
           ./scripts/jq.sh 
